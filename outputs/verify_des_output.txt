@@ -1,0 +1,30 @@
+PS C:\Users\msi\Desktop\Milestone2\crypto_cw> python verify_des.py
+DES round 1 - hand calculation vs program
+plaintext: mohazem8   key: 56374804
+
+stage           hand              program           result
+M               6D6F68617A656D38  6D6F68617A656D38  MATCH
+K               3536333734383034  3536333734383034  MATCH
+C0              0000FFF           0000FFF           MATCH
+D0              0E9B20F           0E9B20F           MATCH
+C1              0001FFE           0001FFE           MATCH
+D1              1D3641E           1D3641E           MATCH
+K1              502CAC4522F5      502CAC4522F5      MATCH
+IP(M)           7F90636B00FFD712  7F90636B00FFD712  MATCH
+L0              7F90636B          7F90636B          MATCH
+R0              00FFD712          00FFD712          MATCH
+E(R0)           0017FFEAE8A4      0017FFEAE8A4      MATCH
+E(R0) xor K1    503B53AFCA51      503B53AFCA51      MATCH
+S-box output    6D87EB1C          6D87EB1C          MATCH
+f               9B6CF3B0          9B6CF3B0          MATCH
+R1              E4FC90DB          E4FC90DB          MATCH
+L1              00FFD712          00FFD712          MATCH
+
+16 of 16 stages match
+Output after round 1: L1R1 = 00FFD712 E4FC90DB
+check f(R0, K1) directly : 9B6CF3B0
+
+Full DES (16 rounds)
+encrypt mohazem8 -> 805F44B134F82434
+decrypt back      -> mohazem8
+test vector        -> 85E813540F0AB405 (expected 85E813540F0AB405)

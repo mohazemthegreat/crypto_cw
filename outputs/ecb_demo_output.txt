@@ -1,0 +1,13 @@
+PS C:\Users\msi\Desktop\Milestone2\crypto_cw> python ecb_demo.py
+Key: 56374804
+
+block  plaintext   ciphertext
+  1    mohazem8    805F44B134F82434
+  2    mohazem8    805F44B134F82434
+  3    hazem696    C35F826309F9C86C
+
+C1 == C2 : True
+C1 == C3 : False
+
+Same plaintext block gives the same ciphertext block in ECB,
+so an attacker can see that blocks 1 and 2 are the same message.
